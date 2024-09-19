@@ -38,7 +38,7 @@ export const AgeCalc = () => {
         <p>The calculated age will be displayed in years.</p>
 
         <div className="main-container">
-          <form className="dob-container" id="myForm" onSubmit={submitHandle}>
+          <form className="dob-container" onSubmit={submitHandle}>
             <h3>Date of Birth</h3>
             <input
               type="date"
@@ -54,7 +54,7 @@ export const AgeCalc = () => {
           <div className="age-container">
             <h3>Your Age is</h3>
             <h1 className="age" onChange={(e) => setAge(e.target.value)}>
-              {age > 0 ? `${age}` : ""}
+              {age > 0 ? `${age}` : "0"}
             </h1>
           </div>
         </div>
